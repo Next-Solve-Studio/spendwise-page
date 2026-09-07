@@ -15,8 +15,8 @@ export default function About() {
 
     return (
         <section id="sobre" className="relative overflow-hidden bg-background-soft py-16 sm:py-20 md:py-24 lg:py-28">
-            <div className="pointer-events-none absolute -left-32 top-20 size-[420px] rounded-full bg-primary/10 blur-[140px]" />
-            <div className="pointer-events-none absolute -right-24 bottom-0 size-[360px] rounded-full bg-accent/10 blur-[140px]" />
+            <div className="pointer-events-none absolute -left-32 top-20 size-105 rounded-full bg-primary/10 blur-[140px]" />
+            <div className="pointer-events-none absolute -right-24 bottom-0 size-90 rounded-full bg-accent/10 blur-[140px]" />
 
             <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12">
                 <div className="grid items-center gap-10 md:gap-14 lg:grid-cols-2 lg:gap-20">
@@ -24,7 +24,7 @@ export default function About() {
                         <div className="pointer-events-none absolute inset-8 rounded-[36px] bg-primary/15 blur-3xl" />
 
                         <div className="relative overflow-hidden rounded-[28px] border border-border/50 bg-card/90 p-2 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl">
-                            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[22px]">
+                            <div className="relative aspect-4/3 w-full overflow-hidden rounded-[22px]">
                                 <Image src="/images/userHappy.png" alt="Pessoa utilizando o Spendwise" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition-transform duration-700 hover:scale-[1.03]" />
                             </div>
 
