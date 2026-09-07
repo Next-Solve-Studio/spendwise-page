@@ -1,5 +1,6 @@
-"use client"
-import { useState, useEffect } from "react"
+"use client";
+
+import { useEffect, useState } from "react";
 
 import LogoH from "./sections/logo/LogoH";
 import NavigationH from "./sections/navigation/NavigationH";
@@ -10,35 +11,36 @@ export default function Header() {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 20)
-        };
+        const handleScroll = () => setScrolled(window.scrollY > 20);
 
         handleScroll();
 
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll)
-        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
 
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
-        <header className={`fixed top-0 w-full h-20 z-50 transition-all duration-300 ${scrolled
-            ? "bg-black/80 backdrop-blur-md shadow-lg"
-            : "bg-transparent"
-            }`}>
-            <section className="max-w-7xl mx-auto flex items-center justify-between h-full px-6 md:px-10 lg:px-16">
-                <div className="flex items-center gap-6">
+        <header className={`fixed inset-x-0 top-0 z-50 h-20 transition-all duration-300 ${scrolled ? "border-b border-border/40 bg-background-soft/85 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-xl" : "bg-transparent"}`}>
+            <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+                <div className="flex items-center gap-8">
                     <LogoH />
 
-                    <div className="hidden md:flex"><NavigationH /></div>
+                    <div className="hidden lg:block">
+                        <NavigationH />
+                    </div>
                 </div>
-                <div className="flex items-center gap-4">
-                    <div className="hidden md:flex"><ButtonsH /></div>
-                    <div className="md:hidden"><SidebarH /></div>
+
+                <div className="flex items-center gap-3">
+                    <div className="hidden lg:block">
+                        <ButtonsH />
+                    </div>
+
+                    <div className="lg:hidden">
+                        <SidebarH />
+                    </div>
                 </div>
-            </section>
+            </div>
         </header>
-    )
+    );
 }
