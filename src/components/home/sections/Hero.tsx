@@ -4,7 +4,7 @@ import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden bg-background-soft pt-32 pb-20 sm:pt-36 lg:pt-40 lg:pb-28">
+        <section className="min-h-screen flex items-center relative overflow-hidden bg-background-soft pt-32 pb-20 sm:pt-36 lg:pt-40 lg:pb-28">
             <div className="pointer-events-none absolute inset-0">
                 <div className="absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]" />
                 <div className="absolute right-0 top-1/3 h-64 w-64 rounded-full bg-accent/5 blur-[120px]" />
@@ -67,7 +67,7 @@ export default function Hero() {
                                 height={800}
                                 priority
                                 alt="Dashboard do aplicativo Spendwise"
-                                src="/images/Spendwisehome.png"
+                                src="/images/services.png"
                                 className="h-auto w-full rounded-[18px] object-cover"
                             />
                         </div>
