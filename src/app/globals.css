@@ -1,16 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  max-width: 100%;
 }
 
+@theme inline {
+  /* Backgrounds */
+  --color-background: #f2f2f2;
+  --color-background-soft: #01040b;
+  --color-background-blue: #06381e;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Verde principal da marca */
+  --color-primary: #10b981;
+  --color-primarylight: #34d399;
+  --color-primarydark: #047857;
+
+  /* Verde elétrico / destaques */
+  --color-accent: #00e676;
+  --color-accentlight: #69f0ae;
+
+  /* Textos */
+  --color-foreground: #ededee;
+  --color-foregroundsecondary: #9b9da3;
+  --color-muted: #57585b;
+
+  /* Bordas */
+  --color-border: #065f46;
+  --color-borderbright: #34d399;
+
+  /* Cards */
+  --color-card: #01040b;
+  --color-cardhover: #06381e;
+
+  /* Glow */
+  --color-glow: #00e676;
 }
