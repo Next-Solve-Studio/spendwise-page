@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Header from "@/components/layout/header/Header";
+import Footer from "@/components/layout/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Spendwise | Controle Financeiro Inteligente",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Spendwise" }],
 
   icons: {
-    icon: "/favicon.ico",
+    icon: "favicon.ico",
   },
 
   openGraph: {
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="pt-BR" className={``}>
       <Header />
       <body className="min-h-full flex flex-col">{children}</body>
+      <Footer />
     </html>
   );
 }
