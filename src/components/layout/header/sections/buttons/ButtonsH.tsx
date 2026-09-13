@@ -6,7 +6,7 @@ import { toast } from "sonner";
 
 export default function ButtonsH() {
     const btnLinks = [
-        { id: 1, text: "Suporte", href: "/suporte", primary: false, icon: Headphones },
+        { id: 1, text: "Suporte", href: "/support", primary: false, icon: Headphones },
         { id: 2, text: "Teste grátis", href: "/test", primary: true, icon: ArrowUpRight },
         { id: 3, text: "English", href: "#", primary: false, icon: Languages, isDevelopment: true },
     ];
