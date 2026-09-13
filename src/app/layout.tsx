@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Header from "@/components/layout/header/Header";
+import Chatbot from "@/components/layout/agenteBot/AgenteBot";
 import Footer from "@/components/layout/footer/Footer";
 
 export const metadata: Metadata = {
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Spendwise" }],
 
   icons: {
-    icon: "favicon.ico",
+    icon: "/faviconS.ico",
   },
 
   openGraph: {
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="pt-BR" className={``}>
       <Header />
       <body className="min-h-full flex flex-col">{children}</body>
+      <Chatbot />
       <Footer />
     </html>
   );
