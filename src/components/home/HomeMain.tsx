@@ -5,6 +5,7 @@ import About from "./sections/About"
 import CTA from "./sections/CTA"
 
 import LoadingPage from "../layout/loanding/LoandingPage"
+import FAQ from "../sections/FAQ/FAQ"
 
 export default function HomeMain() {
     return (
@@ -16,6 +17,7 @@ export default function HomeMain() {
                 <About />
                 <TestimonialCarousel />
                 <CTA />
+                <FAQ />
             </main>
         </>
     )
